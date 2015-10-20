@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WyU-Oh-6tL">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="vyT-7c-6HM">
+            <objects>
+                <viewController id="WyU-Oh-6tL" customClass="ViewController" customModule="CurrencyConversion" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t2Y-Ua-TJQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="oUm-lF-5y2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uPw-IP-LYd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkA-ad-uVF">
+                                <rect key="frame" x="156" y="285" width="66" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="eiV-sO-dfW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fromAmountDidChange" destination="WyU-Oh-6tL" eventType="editingChanged" id="qpi-A2-Pw6"/>
+                                </connections>
+                            </textField>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="TPg-HB-uJK">
+                                <rect key="frame" x="230" y="192" width="66" height="216"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="PNa-mf-5Qy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="WyU-Oh-6tL" id="7Mn-wO-ina"/>
+                                    <outlet property="delegate" destination="WyU-Oh-6tL" id="YKg-T3-IEr"/>
+                                </connections>
+                            </pickerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fsw-YX-Wiv">
+                                <rect key="frame" x="296" y="296" width="8" height="8"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="Qnh-Tl-wAH"/>
+                                    <constraint firstAttribute="width" constant="8" id="o6I-B0-CaU"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dr-8h-BeT">
+                                <rect key="frame" x="304" y="285" width="66" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="toAmountDidChange" destination="WyU-Oh-6tL" eventType="editingChanged" id="fUh-gP-h2n"/>
+                                </connections>
+                            </textField>
+                            <pickerView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="cuB-NM-hri">
+                                <rect key="frame" x="378" y="192" width="66" height="216"/>
+                                <animations/>
+                                <connections>
+                                    <outlet property="dataSource" destination="WyU-Oh-6tL" id="lYS-Jg-Z1D"/>
+                                    <outlet property="delegate" destination="WyU-Oh-6tL" id="9tR-Jd-GyV"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fsw-YX-Wiv" firstAttribute="centerX" secondItem="uPw-IP-LYd" secondAttribute="centerX" id="97M-UY-Ck7"/>
+                            <constraint firstItem="cuB-NM-hri" firstAttribute="centerY" secondItem="uPw-IP-LYd" secondAttribute="centerY" id="IWS-Do-h2f"/>
+                            <constraint firstItem="fsw-YX-Wiv" firstAttribute="centerY" secondItem="uPw-IP-LYd" secondAttribute="centerY" id="LvY-uh-QfI"/>
+                            <constraint firstItem="TPg-HB-uJK" firstAttribute="leading" secondItem="HkA-ad-uVF" secondAttribute="trailing" constant="8" id="NAp-yr-FTj"/>
+                            <constraint firstItem="cuB-NM-hri" firstAttribute="leading" secondItem="5dr-8h-BeT" secondAttribute="trailing" constant="8" id="PBD-NL-ok9"/>
+                            <constraint firstItem="fsw-YX-Wiv" firstAttribute="centerY" secondItem="uPw-IP-LYd" secondAttribute="centerY" id="QrJ-4k-rZA"/>
+                            <constraint firstItem="HkA-ad-uVF" firstAttribute="centerY" secondItem="uPw-IP-LYd" secondAttribute="centerY" id="V3v-g9-N82"/>
+                            <constraint firstItem="5dr-8h-BeT" firstAttribute="centerY" secondItem="uPw-IP-LYd" secondAttribute="centerY" id="WQ4-zN-OR2"/>
+                            <constraint firstItem="5dr-8h-BeT" firstAttribute="leading" secondItem="fsw-YX-Wiv" secondAttribute="trailing" id="c8n-uj-tB6"/>
+                            <constraint firstItem="fsw-YX-Wiv" firstAttribute="leading" secondItem="TPg-HB-uJK" secondAttribute="trailing" id="gta-AY-BVT"/>
+                            <constraint firstItem="5dr-8h-BeT" firstAttribute="width" secondItem="HkA-ad-uVF" secondAttribute="width" id="pbW-9T-dmj"/>
+                            <constraint firstItem="cuB-NM-hri" firstAttribute="width" secondItem="TPg-HB-uJK" secondAttribute="width" id="wFR-zW-1wc"/>
+                            <constraint firstItem="TPg-HB-uJK" firstAttribute="centerY" secondItem="uPw-IP-LYd" secondAttribute="centerY" id="xml-jx-lGr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fromCurrencyPicker" destination="TPg-HB-uJK" id="vy8-cM-PKN"/>
+                        <outlet property="fromValueField" destination="HkA-ad-uVF" id="KHA-1p-Roi"/>
+                        <outlet property="toCurrencyPicker" destination="cuB-NM-hri" id="V6h-Ns-OgP"/>
+                        <outlet property="toValueField" destination="5dr-8h-BeT" id="s2f-Ed-EaA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYr-xm-UWO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1132" y="725"/>
+        </scene>
+    </scenes>
+</document>

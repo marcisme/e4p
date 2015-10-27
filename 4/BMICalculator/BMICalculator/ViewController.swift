@@ -47,11 +47,11 @@ class ViewController: UIViewController {
     }
 
     private func updateHeight() {
-        heightLabel.text = String(format: "%.0f", heightSlider.value)
+        heightLabel.text = String(format: "%.f", heightSlider.value)
     }
 
     private func updateWeight() {
-        weightLabel.text = String(format: "%.0f", weightSlider.value)
+        weightLabel.text = String(format: "%.f", weightSlider.value)
     }
 
     private func updateBmi() {
